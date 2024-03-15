@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#82D1C7"
+    tools:context=".activity.ViewTargets">
+
+    <TextView
+        android:id="@+id/loginText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/poppins_medium"
+        android:text="Targets"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="28sp" />
+
+    <ImageView
+        android:id="@+id/backBtnTargets"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="@dimen/margin_20dp"
+        android:layout_marginTop="25dp"
+        android:src="@drawable/baseline_keyboard_backspace_24"
+        app:tint="@color/white" />
+
+    <include
+        android:id="@+id/targetBtns"
+        layout="@layout/item_switch_target_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/loginText"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/target_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/targetBtns"
+        android:layout_alignParentStart="true"
+        android:paddingTop="20dp"
+        android:layout_alignParentEnd="true"
+        android:paddingBottom="5dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/target_frame_back"
+        tools:listitem="@layout/target_list_items_cards" />
+
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/noDataAnim"
+        android:layout_width="match_parent"
+        android:layout_height="210dp"
+        android:visibility="gone"
+        android:layout_above="@id/noTargetsAvailable"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_fileName="nodataanimation.json"
+        app:lottie_speed="1"/>
+
+    <TextView
+        android:id="@+id/noTargetsAvailable"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:fontFamily="@font/poppins_medium"
+        android:text="Sorry, No Targets Available"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:visibility="gone" />
+
+</RelativeLayout>

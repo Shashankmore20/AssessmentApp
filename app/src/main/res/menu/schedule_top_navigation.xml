@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    android:icon="@null">
+    <item
+        android:id="@+id/navigation_today"
+        android:title="Today"
+        android:icon="@null"/>
+
+    <item
+        android:id="@+id/navigation_weekly"
+        android:title="Weekly"
+        android:icon="@null" />
+
+    <item
+        android:id="@+id/navigation_exams"
+        android:title="Exams"
+        android:icon="@null"/>
+
+    <item
+        android:id="@+id/navigation_calendar"
+        android:title="Calendar"
+        android:icon="@null"/>
+
+</menu>

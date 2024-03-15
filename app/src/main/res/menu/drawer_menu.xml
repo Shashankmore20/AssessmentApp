@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single"
+        android:visible="false"
+        >
+
+        <item
+            android:id="@+id/nav_home"
+            android:enabled="true"
+            android:icon="@drawable/ic_home_black_24dp"
+            android:title="Home" />
+
+        <item
+            android:id="@+id/nav_logout"
+            android:enabled="true"
+            android:icon="@drawable/ic_baseline_login_24"
+            android:title="Logout" />
+    </group>
+
+
+</menu>

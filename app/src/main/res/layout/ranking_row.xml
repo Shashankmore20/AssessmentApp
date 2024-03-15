@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:stretchColumns="1,2,3">
+    <TableRow>
+        <TextView
+            android:textSize="14sp"
+            android:id="@+id/rankLevel"
+            android:textAlignment="center"
+            android:padding="5dp"
+            android:layout_column="1"/>
+
+        <TextView
+            android:id="@+id/rank"
+            android:textSize="14sp"
+            android:textAlignment="center"
+            android:padding="5dp"
+            android:textStyle="bold"
+            android:layout_column="1"/>
+
+        <TextView
+            android:id="@+id/percentile"
+            android:textSize="14sp"
+            android:textAlignment="center"
+            android:padding="5dp"
+            android:textStyle="bold"
+            android:layout_column="1"/>
+    </TableRow>
+
+</TableLayout>

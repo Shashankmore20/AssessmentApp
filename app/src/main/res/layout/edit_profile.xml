@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_above="@+id/btns_ll"
+    android:layout_below="@id/loginscrn"
+    android:fadeScrollbars="false"
+    android:background="#F9FFFE"
+    android:scrollbarSize="5dp"
+    android:scrollbarStyle="insideOverlay">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!--        <include layout="@layout/toolbar_2" />-->
+
+        <LinearLayout
+            android:id="@+id/profile_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/backkBtn"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="@dimen/margin_10dp"
+                    android:src="@drawable/baseline_keyboard_backspace_24" />
+
+                <TextView
+                    android:id="@+id/loginscrn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:text="Edit Profile"
+                    android:textColor="@color/black"
+                    android:textSize="25dp" />
+
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginRight="10dp"
+                android:orientation="vertical"
+                android:scrollbarAlwaysDrawVerticalTrack="true">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/rubik"
+                    android:text="First Name"
+                    android:textColor="@color/black"
+                    android:textSize="15sp" />
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/firstName_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="53dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:background="@drawable/edit_text_new"
+                    android:drawableStart="@drawable/outline_person_24"
+                    android:drawablePadding="20dp"
+                    android:fontFamily="@font/rubik"
+                    android:hint="Enter First Name"
+                    android:inputType="text"
+                    android:maxLength="20"
+                    android:maxLines="1"
+                    android:paddingStart="10dp"
+                    android:singleLine="true"
+                    android:textColor="@color/black"
+                    android:textCursorDrawable="@null"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/rubik"
+                    android:text="Last Name"
+                    android:textColor="@color/black"
+                    android:textSize="15sp" />
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/lastName_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="53dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:background="@drawable/edit_text_new"
+                    android:drawableStart="@drawable/outline_person_24"
+                    android:drawablePadding="20dp"
+                    android:fontFamily="@font/rubik"
+                    android:hint="Enter Last Name"
+                    android:inputType="text"
+                    android:maxLength="20"
+                    android:maxLines="1"
+                    android:paddingStart="10dp"
+                    android:singleLine="true"
+                    android:textColor="@color/black"
+                    android:textCursorDrawable="@null"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/rubik"
+                    android:text="Login Name"
+                    android:textColor="@color/black"
+                    android:textSize="15sp" />
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/loginName_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="53dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:background="@drawable/edit_text_new"
+                    android:drawableStart="@drawable/baseline_login_24"
+                    android:drawablePadding="20dp"
+                    android:fontFamily="@font/rubik"
+                    android:hint="Enter Login Name"
+                    android:inputType="text"
+                    android:maxLength="20"
+                    android:maxLines="1"
+                    android:paddingStart="10dp"
+                    android:singleLine="true"
+                    android:textColor="@color/black"
+                    android:textCursorDrawable="@null"
+                    android:textSize="16sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <!--                    <LinearLayout-->
+                    <!--                        android:layout_width="wrap_content"-->
+                    <!--                        android:layout_height="match_parent"-->
+                    <!--                        android:layout_weight=".5"-->
+                    <!--                        android:orientation="vertical">-->
+
+                    <!--                        <TextView-->
+                    <!--                            android:layout_width="wrap_content"-->
+                    <!--                            android:layout_height="wrap_content"-->
+                    <!--                            android:layout_marginStart="5dp"-->
+                    <!--                            android:fontFamily="@font/rubik"-->
+                    <!--                            android:text="Choose Class"-->
+                    <!--                            android:textColor="@color/black"-->
+                    <!--                            android:textSize="15sp" />-->
+
+                    <!--                        <Spinner-->
+                    <!--                            android:id="@+id/class_spinner"-->
+                    <!--                            android:layout_width="120dp"-->
+                    <!--                            android:layout_height="50dp"-->
+                    <!--                            android:layout_marginStart="5dp"-->
+                    <!--                            android:layout_marginTop="5dp"-->
+                    <!--                            android:background="@drawable/spinner_bg"-->
+                    <!--                            android:elevation="2dp"-->
+                    <!--                            android:padding="10dp"-->
+                    <!--                            android:singleLine="true"-->
+                    <!--                            android:spinnerMode="dropdown" />-->
+                    <!--                    </LinearLayout>-->
+
+                    <LinearLayout
+                        android:id="@+id/dob_l"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:fontFamily="@font/rubik"
+                            android:text="Date of Birth"
+                            android:textColor="@color/black"
+                            android:textSize="15sp" />
+
+                        <RelativeLayout
+                            android:id="@+id/dob_lv"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/CustRefNo"
+                            android:orientation="horizontal">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/dob_tv"
+                                android:layout_width="match_parent"
+                                android:layout_height="53dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginEnd="5dp"
+                                android:background="@drawable/edit_text_new"
+                                android:focusable="false"
+                                android:fontFamily="@font/rubik_medium"
+                                android:hint="DD/MM/YYYY"
+                                android:inputType="text"
+                                android:maxLength="20"
+                                android:maxLines="1"
+                                android:paddingStart="10dp"
+                                android:singleLine="true"
+                                android:textColor="#6F6F79"
+                                android:textCursorDrawable="@null"
+                                android:textSize="16sp" />
+
+                            <ImageView
+                                android:id="@+id/dob_lvv"
+                                android:layout_width="42dp"
+                                android:layout_height="39dp"
+                                android:layout_alignParentRight="true"
+                                android:layout_marginTop="13dp"
+                                android:layout_marginEnd="5dp"
+                                android:paddingVertical="4dp"
+                                android:src="@drawable/ic_calendar"
+                                app:tint="@color/appcolor" />
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="25dp"
+                    android:fontFamily="@font/rubik"
+                    android:text="Select State"
+                    android:textColor="@color/black"
+                    android:textSize="15sp" />
+
+                <AutoCompleteTextView
+                    android:id="@+id/state_sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:background="@drawable/edit_text_new"
+                    android:completionThreshold="1"
+                    android:drawableEnd="@drawable/arrow_icon"
+                    android:drawableTint="@color/black"
+                    android:focusable="false"
+                    android:fontFamily="@font/rubik"
+                    android:hint="Choose State"
+                    android:imeOptions="actionGo"
+                    android:inputType="text"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="10dp"
+                    android:textColor="@color/black"
+                    android:textColorHint="#878787"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/rubik"
+                    android:text="E-Mail ID"
+                    android:textColor="@color/black"
+                    android:textSize="15sp" />
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/email_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="53dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:background="@drawable/edit_text_new"
+                    android:drawableStart="@drawable/baseline_mail_outline_24"
+                    android:drawablePadding="20dp"
+                    android:drawableTint="#6F6F79"
+                    android:fontFamily="@font/rubik"
+                    android:hint="Enter your Mail Id"
+                    android:inputType="textEmailAddress"
+                    android:maxLength="50"
+                    android:maxLines="1"
+                    android:paddingStart="10dp"
+                    android:singleLine="true"
+                    android:textColor="@color/black"
+                    android:textCursorDrawable="@null"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/rubik"
+                    android:text="Contact Number"
+                    android:textColor="@color/black"
+                    android:textSize="15sp" />
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/contact_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="53dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:background="@drawable/edit_text_new"
+                    android:drawableStart="@drawable/ic_twotone_phone_in_talk_24"
+                    android:drawablePadding="20dp"
+                    android:drawableTint="#6F6F79"
+                    android:fontFamily="@font/rubik"
+                    android:hint="Enter your Phone Number"
+                    android:inputType="number"
+                    android:maxLength="10"
+                    android:maxLines="1"
+                    android:paddingStart="10dp"
+                    android:singleLine="true"
+                    android:textColor="@color/black"
+                    android:textCursorDrawable="@null"
+                    android:textSize="16sp" />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/saveBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/profile_layout"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="5dp"
+            android:backgroundTint="@color/appcolor"
+            android:text="Update"
+            android:textColor="@color/white" />
+
+        <Button
+            android:id="@+id/changePassword_Btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/saveBtn"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="5dp"
+            android:backgroundTint="@color/appcolor"
+            android:text="Change Password"
+            android:textColor="@color/white" />
+
+    </RelativeLayout>
+</ScrollView>

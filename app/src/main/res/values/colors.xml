@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <!-- <color name="colorPrimary">#66BB6A</color>
+     <color name="colorPrimaryDark">#4CAF50</color>
+     <color name="colorAccent">#03DAC5</color>-->
+    <!--    <color name="colorPrimary">#2362C0</color>-->
+    <!--    <color name="colorPrimaryDark">#0B72B7</color>-->
+    <color name="colorPrimary">#72BBB2</color>
+    <color name="colorPrimaryDark">#72BBB2</color>
+    <color name="colorAccent">#72BBB2</color>
+    <color name="appcolor">#72BBB2</color>
+    <color name="activity_backcolor">#82D1C7</color>
+    <color name="radio_back">#b3ded8</color>
+    <color name="appcolor_dark">#297066</color>
+    <color name="btn_color">#4BA296</color>
+    <color name="avg_min_color">#AAF5EB</color>
+
+    <color name="AppBgColor">#F9FFFE</color> <!-- THE COLOUR THAT IS USED ALL AROUND THE APP-->
+
+    <color name="trans">#00000000</color>.
+
+    <color name="grey_10">#e6e6e6</color>
+    <color name="grey_20">#cccccc</color>
+    <color name="grey_40">#999999</color>
+    <color name="grey_60">#666666</color>
+    <color name="white">#fff</color>
+    <color name="grey_5">#f2f2f2</color>
+
+    <color name="green_dark_btn">#4BA296</color>
+    <color name="pink">#FF8FA2</color>
+
+    <color name="green_500">#4CAF50</color>
+    <color name="blue_600">#1E88E5</color>
+    <color name="black">#000000</color>
+    <color name="gray_ins">#858494</color>
+    <color name="darkgray_ins">#737378</color>
+
+    <color name="light_blue_400">#29B6F6</color>
+    <color name="bg_blue_light">#90FFFFFF</color>
+    <color name="bg_color">#f4f4f4</color>
+    <color name="blue">#1D6CBA</color>
+    <color name="blue_light">#54C1FF</color>
+    <color name="light_background">#CCF3F5</color>
+    <color name="gray">#808080</color>
+    <color name="correct">#3cd968</color>
+    <color name="incorrect">#ff7d7d</color>
+    <color name="txt_color">#020607</color>
+    <color name="edt_bg">#ecf5f8</color>
+
+    <color name="pink_light">#FB5293</color>
+    <color name="sky">#439BD2</color>
+    <color name="sky_light">#73E1C0</color>
+    99FF00
+    <color name="green_color">#3cd968</color>
+    <color name="green">#3cd968</color>
+    <color name="red">#ff7d7d</color>
+
+    <color name="yellow_color">#FFCC00</color>
+
+    <color name="notification_red">#fa3e3e</color>
+    <color name="red_color">#CC0000</color>
+    <color name="grey_80">#37474F</color>
+    
+    <color name="first">#9087E5</color>
+    <color name="second">#FF8FA2</color>
+    <color name="third">#7491F6</color>
+]
+</resources>

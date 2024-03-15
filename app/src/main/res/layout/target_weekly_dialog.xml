@@ -1,0 +1,430 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <TextView
+        android:id="@+id/setdaily"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="25dp"
+        android:fontFamily="@font/rubik_medium"
+        android:text="Set Your Weekly Targets"
+        android:textColor="@color/black" />
+
+    <ImageView
+        android:id="@+id/close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="10dp"
+        android:src="@drawable/ic_baseline_close"
+        app:tint="@color/black" />
+
+    <LinearLayout
+        android:id="@+id/linear_Days"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/close"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+        android:visibility="visible">
+
+        <TextView
+            android:id="@+id/week1"
+            android:layout_width="65dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="7dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="7dp"
+            android:background="@drawable/circle_background"
+            android:fontFamily="@font/rubik_medium"
+            android:gravity="center"
+            android:text="Week 1"
+            android:textColor="#858494"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/week2"
+            android:layout_width="65dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="7dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="7dp"
+            android:background="@drawable/circle_background"
+            android:fontFamily="@font/rubik_medium"
+            android:gravity="center"
+            android:text="Week 2"
+            android:textColor="#858494"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/week3"
+            android:layout_width="65dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="7dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="7dp"
+            android:background="@drawable/circle_background"
+            android:fontFamily="@font/rubik_medium"
+            android:gravity="center"
+            android:text="Week 3"
+            android:textColor="#858494"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/week4"
+            android:layout_width="65dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="7dp"
+            android:layout_marginBottom="7dp"
+            android:background="@drawable/circle_background"
+            android:fontFamily="@font/rubik_medium"
+            android:gravity="center"
+            android:text="Week 4"
+            android:textColor="#858494"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/dateSelectLinear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/linear_Days"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <RelativeLayout
+            android:id="@+id/rlEWBDate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/CustRefNo"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/EwbDate"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:textColorHint="#CCCCCC"
+                app:boxCornerRadiusBottomEnd="15dp"
+                app:boxCornerRadiusBottomStart="15dp"
+                app:boxCornerRadiusTopEnd="15dp"
+                app:boxCornerRadiusTopStart="15dp"
+                app:boxStrokeWidth="1dp"
+                app:hintTextColor="#CCCCCC">
+
+
+                <EditText
+                    android:id="@+id/EdtStartWeekDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:focusable="false"
+                    android:fontFamily="@font/rubik_medium"
+                    android:hint="Start Date"
+                    android:inputType="date"
+                    android:maxLength="10"
+                    android:maxLines="1"
+                    android:padding="12dp"
+                    android:textColor="@color/black"
+                    android:textColorHighlight="#CCCCCC"
+                    android:textColorHint="#CCCCCC"
+                    android:textCursorDrawable="@null"
+                    android:textSize="14sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <ImageView
+                android:id="@+id/startWeekCal"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="10dp"
+                android:paddingVertical="3dp"
+                android:src="@drawable/ic_baseline_calendar_month_24"
+                app:tint="#82D1C7" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlEWBValidDate"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/CustRefNo"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/EwbValidDate"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:textColorHint="#CCCCCC"
+                app:boxCornerRadiusBottomEnd="15dp"
+                app:boxCornerRadiusBottomStart="15dp"
+                app:boxCornerRadiusTopEnd="15dp"
+                app:boxCornerRadiusTopStart="15dp"
+                app:boxStrokeWidth="1dp"
+                app:hintTextColor="#CCCCCC">
+
+
+                <EditText
+                    android:id="@+id/EdtEndWeekDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:focusable="false"
+                    android:fontFamily="@font/rubik_medium"
+                    android:hint="End Date"
+                    android:inputType="date"
+                    android:maxLength="10"
+                    android:maxLines="1"
+                    android:padding="12dp"
+                    android:textColor="@color/black"
+                    android:textColorHighlight="#CCCCCC"
+                    android:textColorHint="#CCCCCC"
+                    android:textCursorDrawable="@null"
+                    android:textSize="14sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <ImageView
+                android:id="@+id/endWeekCal"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:paddingVertical="3dp"
+                android:src="@drawable/ic_baseline_calendar_month_24"
+                app:tint="#82D1C7" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/setTargetWeekly"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/dateSelectLinear"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/button"
+        android:backgroundTint="#F0FEFC"
+        android:fontFamily="@font/rubik"
+        android:gravity="center_vertical"
+        android:hint="Set your Target Name"
+        android:paddingStart="20dp"
+        android:textColor="#858494"
+        android:textColorHint="#858494"
+        android:textCursorDrawable="@null"
+        android:textSize="14sp" />
+
+    <AutoCompleteTextView
+        android:id="@+id/subjects_spinnerWeekly"
+        android:layout_width="130dp"
+        android:layout_height="42dp"
+        android:layout_below="@id/setTargetWeekly"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/small_shapes_for_home"
+        android:backgroundTint="#82D1C7"
+        android:completionThreshold="1"
+        android:drawableEnd="@drawable/arrow_icon"
+        android:drawableTint="@color/white"
+        android:focusable="false"
+        android:fontFamily="@font/rubik_medium"
+        android:hint="Subject"
+        android:imeOptions="actionGo"
+        android:inputType="text"
+        android:maxLines="1"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:textSize="14sp" />
+
+    <AutoCompleteTextView
+        android:id="@+id/topic_spinnerWeekly"
+        android:layout_width="180dp"
+        android:layout_height="42dp"
+        android:layout_below="@id/setTargetWeekly"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/small_shapes_for_home"
+        android:backgroundTint="#82D1C7"
+        android:clickable="false"
+        android:completionThreshold="1"
+        android:drawableEnd="@drawable/arrow_icon"
+        android:drawableTint="@color/white"
+        android:focusable="false"
+        android:fontFamily="@font/rubik_medium"
+        android:hint="Topic"
+        android:imeOptions="actionGo"
+        android:inputType="text"
+        android:maxLines="1"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:textSize="14sp"
+        android:visibility="visible" />
+
+    <LinearLayout
+        android:id="@+id/Linear_repeat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/subjects_spinnerWeekly"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:gravity="start"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/labelRepeatDaily"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:fontFamily="@font/rubik_medium"
+            android:gravity="center_vertical"
+            android:text="Repeat Every Week"
+            android:textColor="@color/black"
+            android:textSize="17dp" />
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/repeatWeeklySwitch"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="40dp"
+            android:layout_weight="1"
+            android:checked="true"
+            android:thumb="@drawable/switch_thumb"
+            app:track="@drawable/switch_track" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearRepeatDay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/Linear_repeat"
+        android:gravity="start"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/labelRepeatOnlyDay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:fontFamily="@font/rubik_medium"
+            android:gravity="center_vertical"
+            android:text="Repeat For "
+            android:textColor="@color/black"
+            android:textSize="17dp" />
+
+        <TextView
+            android:id="@+id/repeatWeek"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/rubik_medium"
+            android:gravity="center_vertical"
+            android:text="Week 1"
+            android:textColor="@color/black"
+            android:textSize="17dp" />
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/repeatSpecificWeekSwitch"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="40dp"
+            android:layout_weight="1"
+            android:checked="false"
+            android:thumb="@drawable/switch_thumb"
+            app:track="@drawable/switch_track" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearTestCount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/linearRepeatDay"
+        android:layout_marginTop="20dp"
+        android:gravity="start"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/labelTest"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:fontFamily="@font/rubik_medium"
+            android:gravity="center_vertical"
+            android:text="Set your test count: "
+            android:textColor="@color/black"
+            android:textSize="16dp" />
+
+
+        <EditText
+            android:id="@+id/testCountWeekly"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:layout_marginStart="70dp"
+            android:layout_weight="1"
+            android:fontFamily="@font/rubik_medium"
+            android:hint="Count"
+            android:inputType="number"
+            android:background="@drawable/edit_text_new"
+            android:maxLength="3"
+            android:maxLines="1"
+            android:padding="12dp"
+            android:textColor="@color/black"
+            android:textColorHighlight="#CCCCCC"
+            android:textColorHint="#CCCCCC"
+            android:textCursorDrawable="@null"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/submitBtnWeekly"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_below="@id/linearTestCount"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/button"
+        android:backgroundTint="#4BA296"
+        android:fontFamily="@font/rubik_medium"
+        android:text="Save"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="16sp" />
+
+</RelativeLayout>

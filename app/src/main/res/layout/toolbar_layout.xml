@@ -1,0 +1,125 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/relative_top"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/margin_10dp"
+    android:background="@drawable/main_screen_curved_bg">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_10dp"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        app:contentInsetLeft="0dp"
+        app:contentInsetStart="0dp"
+        app:contentInsetStartWithNavigation="0dp"
+        app:titleTextAppearance="@style/Base.TextAppearance.AppCompat.Large"
+        app:titleTextColor="@color/white" />
+
+
+    <ImageView
+        android:id="@+id/imgProf"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_below="@+id/toolbar"
+        android:layout_marginStart="@dimen/padding_15"
+        android:layout_marginTop="@dimen/margin_10dp"
+        android:layout_marginBottom="@dimen/margin_20dp"
+        android:src="@drawable/user"
+        app:civ_border_color="@color/white"
+        app:civ_border_width="2dp" />
+
+
+    <TextView
+        android:id="@+id/tvName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+        android:layout_marginStart="@dimen/margin_10dp"
+        android:layout_marginTop="@dimen/margin_5dp"
+        android:layout_toEndOf="@+id/imgProf"
+        android:fontFamily="@font/open_sans_bold"
+        android:maxLines="1"
+        android:padding="5dp"
+        android:text="@string/app_name"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="@color/white"
+        android:textStyle="bold" />
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvName"
+        android:layout_marginBottom="@dimen/padding_10"
+        android:layout_toEndOf="@+id/imgProf"
+        android:padding="5dp">
+
+
+        <TextView
+            android:id="@+id/tv_score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="5dp"
+            android:background="@drawable/shadow_curved"
+            android:drawablePadding="@dimen/margin_10dp"
+            android:paddingStart="@dimen/padding_10"
+            android:paddingTop="@dimen/margin_5dp"
+            android:paddingEnd="@dimen/padding_10"
+            android:paddingBottom="@dimen/margin_5dp"
+            android:text="@string/zero"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_12sp"
+            android:textStyle="bold"
+            app:drawableStartCompat="@drawable/ic_new_points"
+            app:drawableTint="@color/white" />
+
+
+        <TextView
+            android:id="@+id/tv_coin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/margin_5dp"
+            android:layout_toEndOf="@+id/tv_score"
+            android:background="@drawable/shadow_curved"
+            android:drawablePadding="@dimen/margin_10dp"
+            android:paddingStart="@dimen/margin_dp"
+            android:paddingTop="@dimen/margin_5dp"
+            android:paddingEnd="@dimen/margin_dp"
+            android:paddingBottom="@dimen/margin_5dp"
+            android:text="@string/zero"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_12sp"
+            android:textStyle="bold"
+            app:drawableStartCompat="@drawable/ic_new_coins"
+            app:drawableTint="@color/white" />
+
+
+        <TextView
+            android:id="@+id/tv_rank"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="5dp"
+            android:layout_toEndOf="@+id/tv_coin"
+            android:background="@drawable/shadow_curved"
+            android:drawablePadding="@dimen/margin_10dp"
+            android:paddingStart="@dimen/margin_dp"
+            android:paddingTop="@dimen/margin_5dp"
+            android:paddingEnd="@dimen/margin_dp"
+            android:paddingBottom="@dimen/margin_5dp"
+            android:text="@string/zero"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_12sp"
+            android:textStyle="bold"
+            app:drawableStartCompat="@drawable/ic_new_leaderboard"
+            app:drawableTint="@color/white" />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/addTaskLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="10dp"
+    android:layout_marginStart="10dp"
+    android:layout_marginEnd="10dp"
+    android:layout_marginBottom="10dp"
+    android:background="@drawable/calendar_background"
+    android:visibility="gone">
+
+    <RelativeLayout
+        android:id="@+id/inputs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="5dp">
+
+        <TextView
+            android:id="@+id/scheduleNew"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Schedule New"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:fontFamily="@font/roboto_bold"
+            android:textSize="22sp"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="10dp"/>
+
+        <LinearLayout
+            android:id="@+id/date_layout"
+            android:layout_width="match_parent"
+            android:layout_below="@+id/scheduleNew"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="10dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/taskDateTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:fontFamily="@font/rubik_medium"
+                android:padding="3dp"
+                android:textSize="17dp" />
+
+            <TextView
+                android:id="@+id/taskDayTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:fontFamily="@font/rubik_medium"
+                android:padding="3dp"
+                android:textSize="17dp" />
+
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/titleTv"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@id/date_layout"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/cancel_button"
+            android:fontFamily="@font/rubik"
+            android:backgroundTint="#4D4BA296"
+            android:gravity="center_vertical"
+            android:hint="Set your Title"
+            android:paddingStart="20dp"
+            android:textColor="#858494"
+            android:textColorHint="#858494"
+            android:textCursorDrawable="@null"
+            android:textSize="14sp" />
+
+        <EditText
+            android:id="@+id/descTv"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/titleTv"
+            android:layout_marginTop="5dp"
+            android:hint="Add Description"
+            android:lines="5"
+            android:textAlignment="viewStart" />
+
+        <AutoCompleteTextView
+            android:id="@+id/subjects_spinnerDaily"
+            android:layout_width="140dp"
+            android:layout_height="50dp"
+            android:layout_below="@id/descTv"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/small_shapes_for_home"
+            android:backgroundTint="#82D1C7"
+            android:completionThreshold="1"
+            android:drawableEnd="@drawable/arrow_icon"
+            android:drawableTint="@color/white"
+            android:focusable="false"
+            android:fontFamily="@font/rubik_medium"
+            android:hint="Subject"
+            android:imeOptions="actionGo"
+            android:inputType="text"
+            android:maxLines="1"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:textSize="14sp" />
+
+        <AutoCompleteTextView
+            android:id="@+id/topic_spinnerDaily"
+            android:layout_width="180dp"
+            android:layout_height="50dp"
+            android:layout_below="@id/descTv"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/small_shapes_for_home"
+            android:backgroundTint="#82D1C7"
+            android:clickable="false"
+            android:completionThreshold="1"
+            android:drawableEnd="@drawable/arrow_icon"
+            android:drawableTint="@color/white"
+            android:focusable="false"
+            android:fontFamily="@font/rubik_medium"
+            android:hint="Topic"
+            android:imeOptions="actionGo"
+            android:inputType="text"
+            android:maxLines="1"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:textSize="14sp"
+            android:visibility="visible" />
+
+        <LinearLayout
+            android:id="@+id/dateAndTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/subjects_spinnerDaily"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <RelativeLayout
+                android:id="@+id/rlEWBDate"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/descTv"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/EwbDate"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:textColorHint="#CCCCCC"
+                    app:boxCornerRadiusBottomEnd="15dp"
+                    app:boxCornerRadiusBottomStart="15dp"
+                    app:boxCornerRadiusTopEnd="15dp"
+                    app:boxCornerRadiusTopStart="15dp"
+                    app:boxStrokeWidth="1dp"
+                    app:hintTextColor="#CCCCCC">
+
+
+                    <EditText
+                        android:id="@+id/EdtStartDatee"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:focusable="false"
+                        android:fontFamily="@font/rubik_medium"
+                        android:hint="Date"
+                        android:inputType="date"
+                        android:maxLength="10"
+                        android:maxLines="1"
+                        android:padding="12dp"
+                        android:textColor="@color/black"
+                        android:textColorHighlight="#CCCCCC"
+                        android:textColorHint="#CCCCCC"
+                        android:textCursorDrawable="@null"
+                        android:textSize="14sp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <ImageView
+                    android:id="@+id/startDateCale"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="22dp"
+                    android:layout_marginEnd="11dp"
+                    android:paddingVertical="3dp"
+                    android:src="@drawable/ic_baseline_calendar_month_24"
+                    app:tint="#82D1C7" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlEWBTime"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/descTv"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/EwbTime"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:textColorHint="#CCCCCC"
+                    app:boxCornerRadiusBottomEnd="15dp"
+                    app:boxCornerRadiusBottomStart="15dp"
+                    app:boxCornerRadiusTopEnd="15dp"
+                    app:boxCornerRadiusTopStart="15dp"
+                    app:boxStrokeWidth="1dp"
+                    app:hintTextColor="#CCCCCC">
+
+
+                    <EditText
+                        android:id="@+id/EdtTime"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:focusable="false"
+                        android:fontFamily="@font/rubik_medium"
+                        android:hint="Time"
+                        android:inputType="time"
+                        android:maxLength="10"
+                        android:maxLines="1"
+                        android:padding="12dp"
+                        android:textColor="@color/black"
+                        android:textColorHighlight="#CCCCCC"
+                        android:textColorHint="#CCCCCC"
+                        android:textCursorDrawable="@null"
+                        android:textSize="14sp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <ImageView
+                    android:id="@+id/timeIcon"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="22dp"
+                    android:layout_marginEnd="11dp"
+                    android:paddingVertical="3dp"
+                    android:src="@drawable/timer" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/dateAndTime"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/fromTimeTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="3dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginEnd="3dp"
+                android:layout_marginBottom="3dp"
+                android:hint="00:00 am"
+                android:textSize="20dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:text="to"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/toTimeTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="3dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginEnd="3dp"
+                android:layout_marginBottom="3dp"
+                android:hint="00:00 am"
+                android:textSize="20dp" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/head"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/inputs"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="45dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="5dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/closeDialogBtn"
+                android:layout_width="150dp"
+                android:layout_height="48dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/cancel_button"
+                android:backgroundTint="@color/colorPrimary"
+                android:fontFamily="@font/rubik_medium"
+                android:padding="3dp"
+                android:text="Cancel"
+                android:textAllCaps="false"
+                android:textColor="@color/green_dark_btn"
+                android:textSize="16dp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/saveTaskBtn"
+                android:layout_width="165dp"
+                android:layout_height="48dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/button"
+                android:backgroundTint="@color/colorPrimary"
+                android:fontFamily="@font/rubik_medium"
+                android:padding="3dp"
+                android:text="Schedule"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="16dp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

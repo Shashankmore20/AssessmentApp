@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".fragment.TestsFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/appcolor">
+
+            <ImageView
+                android:id="@+id/iv_home"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:padding="7dp"
+                android:src="@drawable/back_icon">
+
+            </ImageView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:text="Performance Report"
+                android:textColor="@color/white"
+                android:textSize="16sp">
+
+            </TextView>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="10dp"
+                android:visibility="gone">
+
+                <!--            <androidx.cardview.widget.CardView-->
+                <!--                android:layout_width="wrap_content"-->
+                <!--                android:layout_height="wrap_content">-->
+
+                <!--                <RelativeLayout-->
+                <!--                    android:layout_width="match_parent"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:orientation="vertical">-->
+
+                <!--                    <androidx.cardview.widget.CardView-->
+                <!--                        android:id="@+id/card"-->
+                <!--                        android:layout_width="wrap_content"-->
+                <!--                        android:layout_height="wrap_content"-->
+                <!--                        app:cardCornerRadius="30dp"-->
+                <!--                        android:layout_centerHorizontal="true">-->
+                <!--                        <ImageView-->
+                <!--                            android:id="@+id/imageView"-->
+                <!--                            android:layout_width="65dp"-->
+                <!--                            android:layout_height="65dp"-->
+                <!--                            android:layout_centerHorizontal="true"-->
+                <!--                            android:background="@color/bg_blue_light"-->
+                <!--                            android:src="@drawable/book_foreground" />-->
+                <!--                    </androidx.cardview.widget.CardView>-->
+
+                <!--                    <TextView-->
+                <!--                        android:id="@+id/subject"-->
+                <!--                        android:layout_width="wrap_content"-->
+                <!--                        android:layout_height="wrap_content"-->
+                <!--                        android:layout_below="@+id/card"-->
+                <!--                        android:layout_centerHorizontal="true"-->
+                <!--                        android:layout_gravity="center"-->
+                <!--                        android:padding="5dp"-->
+                <!--                        android:text="All"-->
+                <!--                        android:textAlignment="center"-->
+                <!--                        android:textSize="14dp"-->
+                <!--                        android:textStyle="bold" />-->
+                <!--                </RelativeLayout>-->
+                <!--            </androidx.cardview.widget.CardView>-->
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/subjects_rv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fadeScrollbars="false"
+                    android:orientation="horizontal"
+                    android:scrollbars="horizontal"
+
+                    />
+
+            </LinearLayout>
+
+            <include layout="@layout/test_report_layout_home" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <Button
+                    android:id="@+id/your_tests_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_rounded_primary"
+                    android:padding="10dp"
+                    android:text="Your Tests"
+                    android:textColor="@color/white" />
+
+                <!--            <Button-->
+                <!--                android:id="@+id/take_test_btn"-->
+                <!--                android:layout_width="0dp"-->
+                <!--                android:layout_weight="1"-->
+                <!--                android:layout_height="wrap_content"-->
+                <!--                android:background="@drawable/btn_rounded_primary"-->
+                <!--                android:padding="10dp"-->
+                <!--                android:text="Take Test"-->
+                <!--                android:layout_marginLeft="10dp"-->
+                <!--                android:layout_marginRight="10dp"/>-->
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+</FrameLayout>

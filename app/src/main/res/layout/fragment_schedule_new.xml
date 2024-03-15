@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Time Slots on the Left Side -->
+    <GridLayout
+        android:id="@+id/gridLayoutTimes"
+        android:layout_width="50dp"
+        android:layout_height="match_parent"
+        android:columnCount="1"
+        android:rowCount="24"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="40dp"
+        android:background="#ECECEC">
+
+        <!-- Define time slots here dynamically -->
+
+    </GridLayout>
+
+    <!-- Days of the Week on the Top -->
+    <GridLayout
+        android:id="@+id/gridLayoutDays"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:columnCount="7"
+        android:rowCount="1"
+        android:layout_marginStart="50dp"
+        android:background="#ECECEC">
+
+        <!-- Define days of the week here dynamically -->
+
+    </GridLayout>
+
+    <!-- Calendar Events Grid -->
+    <GridLayout
+        android:id="@+id/gridLayoutEvents"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_toEndOf="@id/gridLayoutTimes"
+        android:layout_below="@id/gridLayoutDays">
+
+        <!-- Define calendar events here dynamically -->
+
+    </GridLayout>
+
+    <!-- RecyclerView for Events -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewEvents"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_toEndOf="@id/gridLayoutTimes"
+        android:layout_below="@id/gridLayoutDays"
+        android:layout_marginStart="10dp" />
+</RelativeLayout>

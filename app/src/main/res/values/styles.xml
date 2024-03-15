@@ -1,0 +1,145 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="AppTheme2" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">#4BA296</item>
+        <item name="colorPrimaryDark">#4BA296</item>
+        <item name="colorAccent">#4BA296</item>
+    </style>
+
+    <style name="RoundedCornersDialog" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="android:windowBackground">@drawable/rounded_dialog_background</item>
+    </style>
+
+    <style name="AppTheme4" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">#82D1C7</item>
+        <item name="colorPrimaryDark">#82D1C7</item>
+        <item name="colorAccent">#82D1C7</item>
+    </style>
+
+    <style name="CustomTabTextAppearance" parent="TextAppearance.Design.Tab">
+        <item name="textAllCaps">false</item>
+        <item name="textSize">20sp</item>
+        <item name="android:fontFamily">@font/poppins_medium</item>
+        <!-- Add any other text appearance attributes if needed -->
+    </style>
+
+    <style name="AppTheme3" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="android:windowLightStatusBar">true
+        </item> <!-- For the status bar color icon to change grey-->
+        <item name="colorPrimary">#F9FFFE</item>
+        <item name="colorPrimaryDark">#F9FFFE</item>
+        <item name="colorAccent">#F9FFFE</item>
+        <item name="colorControlActivated">@color/red</item>
+    </style>
+
+    <style name="DialogTheme" parent="Theme.AppCompat.Light.Dialog">
+        <item name="colorPrimary">#00ffff</item>
+        <item name="colorPrimaryDark">#987654</item>
+        <item name="colorAccent">#4BA296</item>
+        <item name="android:buttonBarNegativeButtonStyle" tools:targetApi="lollipop">
+            @style/NegativeButtonStyle
+        </item>
+        <item name="android:buttonBarPositiveButtonStyle" tools:targetApi="lollipop">
+            @style/NegativeButtonStyle
+        </item>
+
+    </style>
+
+    <style name="NegativeButtonStyle" parent="Widget.AppCompat.Button.ButtonBar.AlertDialog">
+        <item name="android:textColor">#4BA296</item>
+    </style>
+
+    <style name="ExposedDropDownMenu" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
+        <item name="android:textColor">#FFA9A9A9</item>
+        <item name="boxStrokeColor">#1B2F2F30</item>
+        <item name="android:textColorHint">#FFA9A9A9</item>
+        <item name="android:colorActivatedHighlight">#535353</item>
+        <item name="hintTextColor">#FFA9A9A9</item>
+    </style>
+
+    <style name="Base.Widget.MaterialComponents.TextInputLayout" parent="Widget.Design.TextInputLayout">
+
+        <item name="boxBackgroundMode">outline</item>
+        <item name="boxBackgroundColor">@null</item>
+        <item name="boxCollapsedPaddingTop">0dp</item>
+
+        <item name="boxCornerRadiusTopStart">@dimen/mtrl_textinput_box_corner_radius_medium</item>
+        <item name="boxCornerRadiusTopEnd">@dimen/mtrl_textinput_box_corner_radius_medium</item>
+        <item name="boxCornerRadiusBottomEnd">@dimen/mtrl_textinput_box_corner_radius_medium</item>
+        <item name="boxCornerRadiusBottomStart">@dimen/mtrl_textinput_box_corner_radius_medium
+        </item>
+
+        //The highlight color. The activated hint, the underline for FilledBox, rectangle Stroke of
+        OutlinedBox
+        <item name="boxStrokeColor">#464646</item>
+    </style>
+
+    <style name="Widget.Design.TextInputLayout" parent="android:Widget">
+        //Defaults the textinputlayout to the plain one, offered by older versions of support
+        library.
+        <item name="boxBackgroundMode">none</item>
+        //Good old TextAppearance themes for hint, helper and error
+        <item name="hintTextAppearance">@style/TextAppearance.Design.Hint</item>
+        <item name="helperTextTextAppearance">@style/TextAppearance.Design.HelperText</item>
+        <item name="errorTextAppearance">@style/TextAppearance.Design.Error</item>
+        //Good old TextAppearance for Input character count
+        <item name="counterTextAppearance">@style/TextAppearance.Design.Counter</item>
+        <item name="counterOverflowTextAppearance">@style/TextAppearance.Design.Counter.Overflow
+        </item>
+
+        // Attributes for the passwordDrawable if your EditText inputType="password"
+        <item name="passwordToggleDrawable">@drawable/design_password_eye</item>
+        <item name="passwordToggleTint">@color/black</item>
+        <item name="passwordToggleContentDescription">@string/password_toggle_content_description
+        </item>
+    </style>
+
+    <style name="EditText.Grey" parent="@style/AppTheme">
+        <item name="colorControlActivated">@color/grey_60</item>
+        <item name="colorControlHighlight">@color/grey_60</item>
+        <item name="colorControlNormal">@color/grey_40</item>
+    </style>
+
+    <style name="Toolbar.Light" parent="@style/AppTheme">
+        <item name="colorControlNormal">@color/grey_60</item>
+        <item name="android:textColorPrimary">@color/grey_60</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="opensans">
+        <item name="fontFamily">@font/rubik</item>
+        <item name="android:textStyle">bold</item>
+        <item name="textSize">16sp</item>
+    </style>
+
+    <!--    <style name="SparkView" parent="Theme.AppCompat.Light.DarkActionBar">-->
+    <!--        <item name="spark_SparkViewStyle">@style/MySparkViewStyle</item>-->
+    <!--    </style>-->
+
+    <style name="MySparkViewStyle">
+        <item name="spark_lineColor">@color/AppBgColor</item>
+        <item name="spark_lineWidth">2dp</item>
+        <item name="spark_cornerRadius">1dp</item>
+        <item name="spark_fill">false</item>
+
+        <item name="spark_baseLineColor">@color/AppBgColor</item>
+        <item name="spark_baseLineWidth">2dp</item>
+
+        <item name="spark_scrubLineColor">@color/AppBgColor</item>
+        <item name="spark_scrubLineWidth">2dp</item>
+        <item name="spark_scrubEnabled">true</item>
+
+        <item name="spark_animateChanges">true</item>
+    </style>
+</resources>
