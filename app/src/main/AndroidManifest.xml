@@ -13,6 +13,17 @@
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".activity.ParentRegistrationActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme3"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".activity.RegistrationActivityBefore"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme2" />
+        <activity
             android:name=".activity.ViewTargets"
             android:exported="true"
             android:screenOrientation="portrait"

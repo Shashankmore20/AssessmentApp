@@ -33,7 +33,15 @@ public class App {
     public static final String CHANGE_PASSWORD_URL = BASE_URL + "api/auth/change-password";
     public static final String EDIT_PROFILE_URL = BASE_URL + "api/user/edit";
     public static final String GENERATE_NEW_TEST_URL = BASE_URL + "api/questions/filter";
-    public static final String SUBJECTS_TOPICS_URL = BASE_URL + "api/master/getSubjectAndTopic/classId/";//TODO
+    public static final String SUBJECTS_TOPICS_URL = BASE_URL + "api/master/getSubjectAndTopic/classId/";
+    public static final String GET_SCHOOL_URL = BASE_URL + "api/master/get/school"; //TODO TEACHER
+    public static final String GET_CLASS_URL = BASE_URL + "api/master/class/all"; //TODO TEACHER
+    public static final String GET_PLAN_URL = BASE_URL + "api/plan/get/"; //TODO BOTH
+    public static final String GET_CURRICULUM_URL = BASE_URL + "api/master/get/curriculum/{schoolId}"; //TODO TEACHER
+    public static final String GET_CURRICULUM_WITHOUT_URL = BASE_URL + "api/master/get/curriculum"; //TODO TEACHER
+    public static final String CHECK_EMAIL_VERIFICATION = BASE_URL + "api/user/unique/email/verification"; //TODO TEACHER
+
+
 
     public static final String COMPLEXITY_MASTER_URL = BASE_URL + "api/master/get/complexity";
 

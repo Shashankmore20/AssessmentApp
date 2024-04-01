@@ -84,7 +84,7 @@ public class RegistrationActivity extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
+        Intent intent = new Intent(getApplicationContext(), RegistrationActivityBefore.class);
         startActivity(intent);
         finish();
     }
@@ -118,7 +118,7 @@ public class RegistrationActivity extends AppCompatActivity {
         backkBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
+                Intent intent = new Intent(getApplicationContext(), RegistrationActivityBefore.class);
                 startActivity(intent);
                 finish();
             }

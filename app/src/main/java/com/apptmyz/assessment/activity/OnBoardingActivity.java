@@ -22,7 +22,7 @@ public class OnBoardingActivity extends AppCompatActivity {
 
     private CircleIndicator3 indicator3;
     private ViewPager2 viewPager2;
-    private TextView login, imageText;
+    private TextView login, imageText, imageTextDec;
     private Button signup;
     private ArrayList<Integer> arrayList = new ArrayList<>();
     private Handler sliderHandler = new Handler();
@@ -30,6 +30,12 @@ public class OnBoardingActivity extends AppCompatActivity {
             "Marks",
             "Time Table",
             "Attendance"
+    };
+
+    private String[] imageDescriptionsText = new String[]{
+            "Your Marks and Assignments at a tap of your finger",
+            "Schedule and Time Table on the go",
+            "Manage your attendance so you don't miss out"
     };
 
 
@@ -43,6 +49,7 @@ public class OnBoardingActivity extends AppCompatActivity {
         login = findViewById(R.id.login);
         signup = findViewById(R.id.signup);
         imageText = findViewById(R.id.imageText);
+        imageTextDec = findViewById(R.id.imageTextDec);
 
         arrayList.add(R.drawable.slide2);
         arrayList.add(R.drawable.slide1);
@@ -77,6 +84,7 @@ public class OnBoardingActivity extends AppCompatActivity {
                 sliderHandler.removeCallbacks(slideRunnable);
                 sliderHandler.postDelayed(slideRunnable, 10000);
                 imageText.setText(imageDescriptions[position]);
+                imageTextDec.setText(imageDescriptionsText[position]);
                 // Checking if the last image is reached in the pager
                 if (position == arrayList.size() - 1) {
                     // Return to first page
@@ -98,7 +106,7 @@ public class OnBoardingActivity extends AppCompatActivity {
     }
 
     private void goToRegistrationScreen(){
-        Intent intent = new Intent(OnBoardingActivity.this, RegistrationActivity.class);
+        Intent intent = new Intent(OnBoardingActivity.this, RegistrationActivityBefore.class);
         startActivity(intent);
     }
 

@@ -1,0 +1,424 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <TextView
+        android:id="@+id/setdaily"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="25dp"
+        android:fontFamily="@font/rubik_medium"
+        android:text="Add Your Child"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="10dp"
+        android:src="@drawable/ic_baseline_close"
+        app:tint="@color/black" />
+
+    <ScrollView
+        android:id="@+id/scroll"
+        android:layout_width="match_parent"
+        android:layout_height="650dp"
+        android:layout_below="@id/close"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="15dp">
+
+        <LinearLayout
+            android:id="@+id/child_linear"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/close"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/rubik"
+                android:text="First Name"
+                android:textColor="@color/black"
+                android:textSize="15sp" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/firstName_et"
+                android:layout_width="match_parent"
+                android:layout_height="53dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:background="@drawable/edit_text_new"
+                android:drawableStart="@drawable/outline_person_24"
+                android:drawablePadding="20dp"
+                android:fontFamily="@font/rubik"
+                android:hint="Enter First Name"
+                android:inputType="text"
+                android:maxLength="20"
+                android:maxLines="1"
+                android:paddingStart="10dp"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textCursorDrawable="@null"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:fontFamily="@font/rubik"
+                android:text="Last Name"
+                android:textColor="@color/black"
+                android:textSize="15sp" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/lastName_et"
+                android:layout_width="match_parent"
+                android:layout_height="53dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:background="@drawable/edit_text_new"
+                android:drawableStart="@drawable/outline_person_24"
+                android:drawablePadding="20dp"
+                android:fontFamily="@font/rubik"
+                android:hint="Enter Last Name"
+                android:inputType="text"
+                android:maxLength="20"
+                android:maxLines="1"
+                android:paddingStart="10dp"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textCursorDrawable="@null"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:fontFamily="@font/rubik"
+                android:text="Login Name"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:visibility="visible" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/loginName_et"
+                android:layout_width="match_parent"
+                android:layout_height="53dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:background="@drawable/edit_text_new"
+                android:drawableStart="@drawable/baseline_login_24"
+                android:drawablePadding="20dp"
+                android:fontFamily="@font/rubik"
+                android:hint="Enter Login Name"
+                android:inputType="text"
+                android:maxLength="20"
+                android:maxLines="1"
+                android:paddingStart="10dp"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textCursorDrawable="@null"
+                android:textSize="16sp"
+                android:visibility="visible" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="15dp"
+                android:fontFamily="@font/rubik"
+                android:text="Date of Birth"
+                android:textColor="@color/black"
+                android:textSize="15sp" />
+
+            <RelativeLayout
+                android:id="@+id/dob_lv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/CustRefNo"
+                android:orientation="horizontal">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/dob_tvv"
+                    android:layout_width="match_parent"
+                    android:layout_height="53dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:background="@drawable/edit_text_new"
+                    android:focusable="false"
+                    android:fontFamily="@font/rubik_medium"
+                    android:hint="DD/MM/YYYY"
+                    android:inputType="text"
+                    android:maxLength="20"
+                    android:maxLines="1"
+                    android:paddingStart="10dp"
+                    android:singleLine="true"
+                    android:textColor="#6F6F79"
+                    android:textCursorDrawable="@null"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:id="@+id/dob_lvvv"
+                    android:layout_width="42dp"
+                    android:layout_height="39dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="13dp"
+                    android:layout_marginEnd="5dp"
+                    android:paddingVertical="4dp"
+                    android:src="@drawable/ic_baseline_calendar_month_24"
+                    app:tint="#6F6F79" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="15dp"
+                android:fontFamily="@font/rubik"
+                android:text="Gender"
+                android:textColor="@color/black"
+                android:textSize="15sp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <RadioGroup
+                    android:id="@+id/gender_rg"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingTop="10dp">
+
+                    <RadioButton
+                        android:id="@+id/male_rb"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/rubik"
+                        android:text="Male"
+                        android:textColor="#6F6F79"
+                        android:textSize="16sp" />
+
+                    <RadioButton
+                        android:id="@+id/female_rb"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="25dp"
+                        android:fontFamily="@font/rubik"
+                        android:text="Female"
+                        android:textColor="#6F6F79"
+                        android:textSize="16sp" />
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="5dp"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <AutoCompleteTextView
+                    android:id="@+id/class_spinner"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/edit_text_new"
+                    android:completionThreshold="1"
+                    android:drawableEnd="@drawable/arrow_icon"
+                    android:drawableTint="@color/black"
+                    android:focusable="false"
+                    android:fontFamily="@font/rubik_medium"
+                    android:hint="Select Class"
+                    android:imeOptions="actionGo"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="10dp"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/black"
+                    android:textSize="14sp" />
+
+                <AutoCompleteTextView
+                    android:id="@+id/school_spinner"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/edit_text_new"
+                    android:clickable="false"
+                    android:completionThreshold="1"
+                    android:drawableEnd="@drawable/arrow_icon"
+                    android:drawableTint="@color/black"
+                    android:focusable="true"
+                    android:fontFamily="@font/rubik_medium"
+                    android:hint="Select School"
+                    android:imeOptions="actionGo"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="10dp"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/black"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/other_linear"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/text_schoolName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:fontFamily="@font/rubik"
+                    android:text="School Name"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    android:visibility="visible" />
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/school_Name"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:background="@drawable/edit_text_new"
+                    android:drawableStart="@drawable/outline_school_24"
+                    android:drawablePadding="20dp"
+                    android:fontFamily="@font/rubik_medium"
+                    android:hint="School Name"
+                    android:imeOptions="actionGo"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="10dp"
+                    android:singleLine="true"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/black"
+                    android:textCursorDrawable="@null"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/text_SchoolCode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:fontFamily="@font/rubik"
+                    android:text="School Code"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    android:visibility="visible" />
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/school_Code"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/edit_text_new"
+                    android:drawableStart="@drawable/outline_bookmark_border_24"
+                    android:drawablePadding="20dp"
+                    android:fontFamily="@font/rubik_medium"
+                    android:hint="School Code"
+                    android:imeOptions="actionGo"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="10dp"
+                    android:singleLine="true"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/black"
+                    android:textCursorDrawable="@null"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+            <AutoCompleteTextView
+                android:id="@+id/curriculum_spinner"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="5dp"
+                android:background="@drawable/edit_text_new"
+                android:clickable="false"
+                android:completionThreshold="1"
+                android:drawableEnd="@drawable/arrow_icon"
+                android:drawableTint="@color/black"
+                android:focusable="false"
+                android:fontFamily="@font/rubik_medium"
+                android:hint="Choose Curriculum"
+                android:imeOptions="actionGo"
+                android:inputType="text"
+                android:maxLines="1"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                android:textSize="14sp" />
+
+            <Button
+                android:id="@+id/add_profile_pic_btn"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@id/child_linear"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="25dp"
+                android:background="@drawable/cancel_button"
+                android:backgroundTint="#4BA296"
+                android:fontFamily="@font/rubik_medium"
+                android:text="Upload Profile Pic"
+                android:textAllCaps="false"
+                android:textColor="#4BA296"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <Button
+        android:id="@+id/AddChildDialogBtn"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:layout_below="@id/scroll"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/button"
+        android:backgroundTint="#4BA296"
+        android:fontFamily="@font/rubik_medium"
+        android:text="Add"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="16sp" />
+
+</RelativeLayout>

@@ -14,6 +14,9 @@ public class Constants {
     public static final Integer REPEATING_SPECIFIC_MONTH=6; // 1 2 3 4 5 6 7 8 9 10 11 12 for repeating month
     //
 
+    public static final Integer PARENT_ROLE_ID = 3;
+    public static final Integer TEACHER_ROLE_ID = 4;
+
     public static final String DAY="D";
     public static final String WEEKLY="W";
     public static final String MONTHLY="M";

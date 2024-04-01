@@ -7,7 +7,6 @@ public class SubjectModel {
     String subjectName;
     String subjectDescription;
     String fileName;
-
     ArrayList<TopicModel> topics;
 
     public String getFileName() {

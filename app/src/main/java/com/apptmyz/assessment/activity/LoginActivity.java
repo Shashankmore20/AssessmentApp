@@ -211,7 +211,7 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     private void goToRegistrationScreen() {
-        Intent intent = new Intent(LoginActivity.this, RegistrationActivity.class);
+        Intent intent = new Intent(LoginActivity.this, RegistrationActivityBefore.class);
         startActivity(intent);
         finish();
     }
@@ -280,19 +280,25 @@ public class LoginActivity extends AppCompatActivity {
 
                                     //-----------------------------------
                                     String sDate6 = obj1.getString("dob");
+                                    if (sDate6 != null && !sDate6.isEmpty() && sDate6 != "null") {
+                                        SimpleDateFormat formatter1 = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+                                        Date date6 = formatter1.parse(sDate6);
+                                        System.out.println(sDate6 + "\t" + date6);
 
-                                    SimpleDateFormat formatter1 = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-                                    Date date6 = formatter1.parse(sDate6);
-                                    System.out.println(sDate6 + "\t" + date6);
+                                        String pattern = "dd/MM/yyyy";
+                                        SimpleDateFormat simpleDateFormat = new SimpleDateFormat(pattern);
+                                        String date = simpleDateFormat.format(date6);
+                                        System.out.println(date);
 
-                                    String pattern = "dd/MM/yyyy";
-                                    SimpleDateFormat simpleDateFormat = new SimpleDateFormat(pattern);
-                                    String date = simpleDateFormat.format(date6);
-                                    System.out.println(date);
+                                        userDetails.setDob(date);
+                                    }
+                                    else  {
+                                        Toast.makeText(this,"The Date of birth is null", Toast.LENGTH_SHORT).show();
+                                    }
+
 
                                     //--------------------------------------
 
-                                    userDetails.setDob(date);
                                     userDetails.setGender(obj1.getString("gender"));
                                     userDetails.setContactNumber(obj1.getString("contactNumber"));
 //                                    userDetails.setStateId(obj1.getInt("stateId"));

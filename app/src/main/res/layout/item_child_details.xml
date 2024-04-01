@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="6.5dp"
+        android:weightSum="5">
+
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.2"
+            android:fontFamily="@font/poppins_medium"
+            android:layout_gravity="center_vertical"
+            android:gravity="center"
+            android:text="Test Name"
+            android:maxLines="1"
+            android:textColor="@color/black"
+            android:textSize="12sp"/>
+        <TextView
+            android:id="@+id/tvClass"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:fontFamily="@font/poppins_medium"
+            android:gravity="center"
+            android:text="Class 10th"
+            android:maxLines="1"
+            android:layout_gravity="center_vertical"
+            android:paddingHorizontal="2.6dp"
+            android:textColor="@color/black"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tvDateOfBirth"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1.4"
+            android:fontFamily="@font/poppins_medium"
+            android:gravity="center"
+            android:maxLines="1"
+            android:paddingHorizontal="2.6dp"
+            android:text="20/09/2001"
+            android:textColor="@color/black"
+            android:textSize="12sp" />
+        <ImageView
+            android:id="@+id/imageEdit"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/llItemDetails"
+            android:layout_weight=".7"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/baseline_edit_note_24"
+            app:tint="@color/black" />
+        <ImageView
+            android:id="@+id/imageDelete"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/llItemDetails"
+            android:layout_weight=".7"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/baseline_delete_24"
+            app:tint="@color/black" />
+
+    </LinearLayout>
+
+</RelativeLayout>

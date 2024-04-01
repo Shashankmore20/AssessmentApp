@@ -17,36 +17,36 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="20dp"
-            android:textAlignment="center"
             android:fontFamily="@font/joti_one"
-            android:text="ASSESSMENT"
             android:padding="10dp"
+            android:text="ASSESSMENT"
+            android:textAlignment="center"
             android:textColor="@color/white"
-            android:textSize="55sp" />
+            android:textSize="48sp" />
 
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="20dp"
             android:padding="10dp"
-            android:visibility="gone"
-            android:src="@drawable/img2" />
+            android:src="@drawable/img2"
+            android:visibility="gone" />
 
-<!--        <TextView-->
-<!--            style="@style/TextAppearance.MaterialComponents.Headline6"-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:text="Welcome "-->
-<!--            android:textColor="@android:color/white"-->
-<!--            android:textStyle="bold" />-->
+        <!--        <TextView-->
+        <!--            style="@style/TextAppearance.MaterialComponents.Headline6"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:text="Welcome "-->
+        <!--            android:textColor="@android:color/white"-->
+        <!--            android:textStyle="bold" />-->
 
         <ProgressBar
             android:id="@+id/splashProgress"
             style="?android:attr/progressBarStyleHorizontal"
             android:layout_width="150dp"
-            android:progressTint="@color/white"
             android:layout_height="wrap_content"
-            android:layout_marginTop="50dp" />
+            android:layout_marginTop="50dp"
+            android:progressTint="@color/white" />
 
     </LinearLayout>
 
